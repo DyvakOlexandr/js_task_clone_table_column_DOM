@@ -8,11 +8,15 @@ const tableHead = document.querySelector('thead');
 const tableFoot = document.querySelector('tfoot');
 const headName = tableHead.rows[0].cells[1].innerHTML;
 const footName = tableFoot.rows[0].cells[1].innerHTML;
-const lasthead = tableHead.children[0].children[4].cloneNode(true);
-const lastfoot = tableFoot.children[0].children[4].cloneNode(true);
+const lasthead = tableHead.children[0].children[1].cloneNode(true);
+const lastfoot = tableFoot.children[0].children[1].cloneNode(true);
 
-lasthead.innerHTML = headName;
-lastfoot.innerHTML = footName;
+const elementLastHead = document.createElement('th');
+const elementLastFoot = document.createElement('th');
+
+elementLastHead.innerHTML = headName;
+
+elementLastFoot.innerHTML = footName;
 
 const elementHeadTooAdd = tableHead.children[0].children[4];
 
